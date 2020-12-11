@@ -15,7 +15,15 @@
  - Script execution
 	![redmine-get-a](screenshot-a.png)
 
- - Download and saved files (The project folder will be created and then, files are saved into that folder)
+ - Download and saved files
+   - The project folder will be created and then, files are saved into that folder
+   - File format will be as like ...
+  ```
+     - path/to/projectName/#issueNumber _______________ AuthorName-IssueTile.html
+     - path/to/projectName/#issueNumber _______________ AuthorName-IssueTile.url
+     - path/to/projectName/#issueNumber date_uploadtime AuthorName-AttachFileName.ext
+     - ...
+  ```
 	![redmine-get-b](screenshot-b.png)
 
 ### The benefit of this script
