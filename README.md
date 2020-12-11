@@ -106,8 +106,8 @@
 	               project name (proj_abc) can be found from your Redmine URL
 	               http://your.redmineserver.org:8080/redmine/projects/proj_abc/issues
 	                                                                   ^^^^^^^^
-	-an(y_issue) : by default, it download only 'open' issue. -an option download any issues (open and closed)
-	-cl(one)     : by default, if same file exist your local folder, it skip. -cl option force to overwrite
+	-an(y_issue) : by default, the script download only 'open' issue. -an option download any issues (open and closed)
+	-cl(one)     : by default, the script skip attachmemt file if same file exist on your local folder. -cl option force to overwrite
 	```
 
  - Type as followings in command-line
