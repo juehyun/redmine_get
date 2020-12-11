@@ -15,7 +15,7 @@
  - Script execution
 	![redmine-get-a](screenshot-a.png)
 
- - Download and saved files
+ - Download and saved files (The project folder will be created and then, files are saved into that folder)
 	![redmine-get-b](screenshot-b.png)
 
 ### The benefit of this script
