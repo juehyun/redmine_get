@@ -24,6 +24,7 @@
      - path/to/projectName/#issueNumber date_uploadtime AuthorName-AttachFileName.ext
      - ...
   ```
+   - Screenshot for downloaded folder
 	![redmine-get-b](screenshot-b.png)
 
 ### The benefit of this script
