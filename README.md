@@ -19,10 +19,18 @@
    - The project folder will be created and then, files are saved into that folder
    - File format will be as like ...
   ```
-     - path/to/projectName/#issueNumber _______________ AuthorName-IssueTile.html
-     - path/to/projectName/#issueNumber _______________ AuthorName-IssueTile.url
-     - path/to/projectName/#issueNumber date_uploadtime AuthorName-AttachFileName.ext
-     - ...
+     - path/to/projid/#XXXXX _______________ nameOfIssueCreator-issueTitle.html
+     - path/to/projid/#XXXXX _______________ nameOfFileUploader-issueTitle.url
+     - path/to/projid/#XXXXX date_uploadtime nameOfFileUploader-attachmentFilename.ext
+     
+     XXXXX              : 5 digit issue number
+     path/to/projid     : the folder saving the files
+     projid             : project id of redmine server's URL 
+                          e.g. if URL is http://111.222.33.44:8080/redmine/projects/projhello/... , projid='porjhello
+     nameOfIssueCreator : the name of the user who create the issue
+     nameOfFileUploader : the name of the user who upload the attachments files
+     date               : YYYYMMDD
+     uploadtime         : HHMM
   ```
    - Screenshot for downloaded folder
 	![redmine-get-b](screenshot-b.png)
@@ -119,15 +127,11 @@
 	-cl(one)     : by default, the script skip attachmemt file if same file exist on your local folder. -cl option force to overwrite
 	```
 
- - Type as followings in command-line
+ - Command-line examples
 	```
-	> python path_to\redmine_get.py -proj  proj_a  proj_b  proj_c 
-	> python path_to\redmine_get.py -issue 1319 1573 1554
-	> python path_to\redmine_get.py -proj  proj_a  proj_c  -issue 1319 1513
-
-	> python path_to\redmine_get.py -pr proj_vic proj_abc -is 1234 2346 -cl -an
-	> python path_to\redmine_get.py -pr ab11
-	> python path_to\redmine_get.py -is 1234 1295 1325
-
+	> python path_to\redmine_get.py -pr proj_a  proj_b  proj_c          // download all issue, all attachments from proj_a, proj_b and proj_c
+	> python path_to\redmine_get.py -is 1319 1573 1554                  // download issues (1319, 1573, 1554) and all its attachments files
+	> python path_to\redmine_get.py -pr proj_a proj_c  -issue 1319 1513 // download proj_a, proj_c and download issue 1319 and 1513  
+	> python path_to\redmine_get.py -pr proj_a -is 1234 2346 -cl -an    // download 'open' and 'closed' issues and overwrite existing files	
 	> python path_to\redmine_get.py [Enter] to see usage
 	```
